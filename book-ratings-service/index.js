@@ -4,9 +4,7 @@ const app = new Koa();
 app.use(ctx => {
   ctx.set('Content-Type', 'application/json')
   ctx.body = {
-    title: 'A Good Book',
-    author: 'Sang Yum',
-    publisher: 'Yummy Publishing Co.'
+    rating: 4
   };
   ctx.status = 200
 });
