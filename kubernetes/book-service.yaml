@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-service
+  # labels:
+  #   app: book-app
+  #   role: book-metadata
+  #   tier: backend
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+  - port: 8080
+    # targetPort: 80
+  selector:
+    app: book-app
+    role: book-metadata
+    tier: backend
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: book-service
+  # these labels can be applied automatically
+  # from the labels in the pod template if not set
+  # labels:
+  #   app: redis
+  #   role: master
+  #   tier: backend
+spec:
+  # this replicas value is default
+  # modify it according to your case
+  replicas: 2
+  # selector can be applied automatically
+  # from the labels in the pod template if not set
+  # selector:
+  #   matchLabels:
+  #     app: guestbook
+  #     role: master
+  #     tier: backend
+  template:
+    metadata:
+      labels:
+        app: book-app
+        role: book-metadata
+        tier: backend
+    spec:
+      containers:
+      - name: book-service
+        image: docker.io/sangyum/book-service:1.0  # or just image: redis
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: NODE_ENV
+          value: development

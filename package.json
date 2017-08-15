@@ -1,0 +1,26 @@
+{
+  "name": "book-reviews",
+  "version": "1.0.0",
+  "description": "Book Review Project",
+  "main": "ecosystem.config.js",
+  "dependencies": {
+    "zipkin": "^0.7.3",
+    "zipkin-context-cls": "^0.6.1",
+    "zipkin-transport-http": "^0.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YumboRumbo/book-reviews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YumboRumbo/book-reviews/issues"
+  },
+  "homepage": "https://github.com/YumboRumbo/book-reviews#readme"
+}

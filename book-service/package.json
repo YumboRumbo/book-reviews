@@ -12,6 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.3.0"
+    "faker": "^4.1.0",
+    "koa": "^2.3.0",
+    "koa-cors": "0.0.16",
+    "node-fetch": "^1.7.2",
+    "zipkin": "^0.7.3",
+    "zipkin-context-cls": "^0.6.1",
+    "zipkin-instrumentation-fetch": "^0.7.3",
+    "zipkin-transport-http": "^0.7.3"
   }
 }

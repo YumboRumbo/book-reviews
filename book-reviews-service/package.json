@@ -1,5 +1,5 @@
 {
-  "name": "book-service",
+  "name": "book-reviews-service",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "faker": "^4.1.0",
     "koa": "^2.3.0"
   }
 }

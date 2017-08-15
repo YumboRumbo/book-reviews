@@ -1,0 +1,21 @@
+apps:
+  - script    : ./book-service/index.js
+    name      : 'book-service'
+    watch     : true
+    env       :
+      NODE_ENV: development
+      PORT: 3001
+
+  - script    : ./book-ratings-service/index.js
+    name      : 'book-ratings-service'
+    watch     : true
+    env       :
+      NODE_ENV: development
+      PORT: 3002
+
+  - script    : ./book-reviews-service/index.js
+    name      : 'book-reviews-service'
+    watch     : true
+    env       :
+      NODE_ENV: development
+      PORT: 3003
